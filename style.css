@@ -1,0 +1,421 @@
+/* variable */
+:root {
+  --first: darkslateblue;
+  --second: goldenrod;
+  --third: slateblue;
+  --h3: burlywood;
+  --general: bisque;
+}
+
+
+
+/* default */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/* base style */
+body {
+  background: var(--first);
+  overflow-x: hidden;
+  font-family: 'Rubik Regular';
+}
+
+.button {
+  background: none;
+  border: 2px solid var(--second);
+  border-radius: 20px;
+  color: var(--second);
+  padding: 5px 15px;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+
+.button:hover {
+  background: var(--second);
+  color: var(--first);
+}
+
+/* General style */
+.welcome-image img {
+  width: 300px;
+}
+
+#portfolio img {
+  width: 300px;
+}
+
+/* #skills img {
+  width: 200px;
+} */
+
+input,
+textarea {
+  background: var(--third);
+  padding: 10px 15px;
+  border: 2px solid var(--second);
+  border-radius: 25px;
+  color: var(--second);
+}
+
+
+/* fonts */
+@font-face {
+  font-family: 'Rubik Regular';
+  src: url('Assets/font/Rubik-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url('Assets/font/Rubik-Bold.ttf');
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--general);
+  font-weight: normal;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h4,
+.leading {
+  font-size: 1.1em;
+}
+
+p,
+a,
+li {
+  color: wheat;
+}
+
+
+/* mobile */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 10px;
+}
+
+.site-nav {
+  margin: 0 20px;
+}
+
+.site-nav ul {
+  display: none;
+}
+
+#welcome {
+  padding: 0 20px 20px;
+  overflow: hidden;
+}
+
+.welcome-text {
+  grid-column: 1/6;
+}
+
+.welcome-image {
+  grid-column: 6/8;
+}
+
+.welcome-image img {
+  width: 400%;
+  margin-top: 25px;
+  border-radius: 45px;
+}
+
+#portfolio {
+  background: url('Assets/Image/kisspng-architecture-royalty-free-euclidean-vector-creative-city-building-perspective-lines-5a6a4f52933316.377284791516916562603.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 0;
+  padding: 30px 20px;
+}
+
+#portfolio h3,
+#skills h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.project .wrap {
+  grid-column: 1/9;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.project .wrap * {
+  align-self: center;
+  margin: 0 15px;
+  max-width: 70%;
+}
+
+.project img {
+  grid-column: 1/6;
+}
+
+.project h4 {
+  grid-column: 6/9;
+}
+
+#skills {
+  padding: 30px 20px;
+  background: var(--third);
+}
+
+#skills ul {
+  margin: 20px 0;
+}
+
+#skills ul li {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+  text-align: center;
+}
+
+#skills ul li img {
+  max-width: 120px;
+}
+
+#contact {
+  padding: 30px 20px;
+  background: var(--first);
+}
+
+#contact h3,
+#contact p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#contact form {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  margin: 10px auto;
+}
+
+#contact .button {
+  margin: 30px auto;
+}
+
+::placeholder {
+  color: var(--h3);
+}
+
+footer {
+  padding: 30px 20px;
+  background: var(--first);
+  background-image: url('Assets/Image/flare.png');
+  background-blend-mode: overlay;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer .copyright {
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+
+footer .social-network {
+  grid-column: 7/9;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: center;
+}
+
+footer img {
+  width: 70%;
+}
+
+/* small tablet */
+@media screen and (min-width:620px) {
+  body {
+    font-size: 1.22em;
+  }
+
+  .site-nav h1 {
+    grid-column: 1/3;
+  }
+
+  .site-nav ul {
+    display: block;
+    grid-column: 4/9;
+    padding: 20px 0;
+    text-align: right;
+  }
+
+  .site-nav ul li {
+    display: inline-block;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  .welcome-text {
+    grid-column: 1/5;
+  }
+
+  .welcome-image {
+    grid-column: 5/9;
+  }
+
+  .welcome-image img {
+    width: 100%;
+    /* height: 300px; */
+  }
+
+  .project {
+    margin-top: 40px;
+  }
+
+  .project .wrap {
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0 20px 10px;
+  }
+
+  .project .wrap:last-child {
+    grid-column: 3/7;
+  }
+
+  .project .wrap * {
+    max-width: 80%;
+    /* margin: 10px 10%; */
+  }
+
+  .project h4 {
+    text-align: center;
+  }
+
+  #skills {
+    padding: 30px 80px;
+  }
+
+  footer {
+    background-size: 20%;
+    background-color: var(--third);
+  }
+
+  footer .copyright {
+    grid-column: 1/5;
+    align-self: center;
+  }
+
+  footer .social-network img {
+    width: 50%;
+  }
+}
+
+/* laptop */
+@media screen and (min-width:1200px) {
+
+  .site-nav h1 {
+    font-size: 32px;
+  }
+
+  .site-nav ul {
+    font-size: 24px;
+  }
+
+  .welcome-text h2 {
+    font-size: 37px;
+  }
+
+  .welcome-text .leading {
+    line-height: 32px;
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  .project .wrap {
+    grid-column: span none;
+    margin: 40px auto 70px;
+  }
+
+  .project .wrap:first-child {
+    grid-column: 1/3;
+  }
+
+  .project .wrap:nth-child(2) {
+    grid-column: 4/6;
+  }
+
+  .project .wrap:last-child {
+    grid-column: 7/9;
+  }
+
+  #skills ul li {
+    grid-column: span 2;
+    margin: 30px 10px 70px;
+  }
+
+  #contact h3,
+  #contact p {
+    margin-bottom: 25px;
+  }
+
+  #contact form {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  #contact input,
+  #contact textarea {
+    outline: inset 1px var(--third);
+    width: 100%;
+  }
+
+  ::placeholder {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 25px;
+  }
+
+  footer .copyright {
+    padding-left: 3em;
+  }
+
+  footer .social-network {
+    grid-column: 7/8;
+  }
+
+  footer img {
+    max-width: 35px;
+  }
+}
