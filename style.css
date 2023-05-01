@@ -44,6 +44,7 @@ body {
   color: var(--first);
 }
 
+
 /* General style */
 .welcome-image img {
   width: 300px;
@@ -52,7 +53,6 @@ body {
 #portfolio img {
   width: 300px;
 }
-
 
 input,
 textarea {
