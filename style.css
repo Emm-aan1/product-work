@@ -331,9 +331,9 @@ footer img {
   }
 }
 
+
 /* laptop */
 @media screen and (min-width:1200px) {
-
   .site-nav h1 {
     font-size: 32px;
   }
